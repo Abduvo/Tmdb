@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/head.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>The Movie</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="nav_link">
+            <div class="nav_logo">
+                <a href="./Index.html"> <img class="nav_img" src="../Assets/TMDB.png" alt="The Movie Database (TMDB)" width="154"
+                        height="20"></a>
+            </div>
+
+            <ul class="nav_wrapper">
+                <li class="movie">Movies
+                    <div class="drop popu">
+                        <a href="./movies/Popular.html">Popular</a><br>
+                        <a href="./movies/playing.html">Now playing</a>
+                        <a href="./movies/upcoming.html">Upcoming</a>
+                        <a href="./movies/rated.html">Top Rated</a>
+                    </div>
+                </li>
+
+                <li class="show"> TV Shows
+                    <div class="drop tv_show">
+                        <a href="./show/tv.html">Popular</a><br>
+                        <a href="./show/airing.html">Airing Today</a><br>
+                        <a href="">On Tv</a><br>
+                        <a href="">Top Rated</a>
+                    </div>
+                </li>
+
+                <li class="people">People
+                    <div class="drop popular_people">
+                        <a href="./people.html">Popular People</a>
+                    </div>
+                </li>
+
+                <li class="more_drop">More
+                    <div class="drop discusion">
+                        <a href="">Discussions</a>
+                        <a href="">Leaderboard</a>
+                        <a href="">Support </a>
+                        <a href="">API</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="navbar">
+                <div class="nav_icon">
+                    <i style="font-weight: 800;" class="fa-solid fa-plus"></i>
+                </div>
+                <div class="nav_langua">
+                    <span></span><span></span><span></span><span></span><span>UZ</span>
+                </div>
+                <div class="profil">A</div>
+                <div class="nav_icon">
+                    <i style="color: #01b4e4;" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header_div">
+            <div class="head_wrap">
+                <h1>Welcome.</h1>
+                <h2>Millions of movies, TV shows and people to discover. Explore now.</h2>
+                <div class="head_flex">
+                    <input type="text" placeholder="Search for a movie, tv show, person....... "><button><a href="./search.html">Search</a></button>
+                </div>
+            </div>
+            <div class="head_wrapper">
+                <h3 style="padding-top: 50px;">THAT'S A</h3>
+                <h3 style="margin-top: -45px;">WRAP 2022</h3>
+                <h3 style="margin-top: -45px;" class="chiziq"></h3>
+                <h4>The best (and worst) from 2022.</h4>
+                <button class="check">Check it out <i style="padding-left: 7px;" class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="cards">
+
+        <div class="main_grid">
+            <h1>Trending</h1>
+            <div class="trending_film">
+                <button onclick="get()" class="trending today">Today</button>
+                <button onclick="trendget()" class="trend this_week">This Week</button>
+            </div>
+        </div>
+
+        <div id="main_filmer">
+            <div id="main_film"></div>
+        </div>
+        <div id="trend_film">
+            <div id="main_week"></div>
+        </div>
+
+    </main>
+
+
+    <!-- SECTION -->
+    <section class="sect">
+
+        <div class="sect_grid" style="margin-left: 20px;">
+            <h1 style="color: white;margin-top: 50px;">Latest Trailers</h1>
+            <div class="trending_film" style="margin-top: 50px; margin-left: 20px;">
+                <button class="trending" style="background-color: #64e7ba; color: black;">On-Tv</button>
+                <button style="color: white;" class="trend latest">In Theaters</button>
+            </div>
+        </div>
+
+        <div id="on-tv">
+            <div class="on-card">
+                <div class="on-video">
+                    <!-- <video src="./Assets/БИЗНИНГ_ОХИРГИМИЗ_СЎНГИМИЗ_2_ҚИСМ___BIZNING_OXIRGIMIZ_SO'NGIMIZ.mp4"
+                        controls></video> -->
+                </div>
+                <div class="on-title">
+                    <h2>Bizning oxirgimiz</h2>
+                    <h6>Episode 4 Preview</h6>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION2 -->
+    <section class="cards-onTV">
+
+        <div class="main_grid">
+            <h1>What's popular </h1>
+            <div class="trending_film">
+                <button class="trending_btn" onclick="Ontv()">On Tv</button>
+                <button class="threater" onclick="trhreater_get()">In Threaters</button>
+            </div>
+        </div>
+
+        <div id="ontv_filmer">
+            <div id="on_tv"></div>
+        </div>
+        <div id="threaterfilm">
+            <div id="Threaters"></div>
+        </div>
+    
+        </div>
+
+    </section>
+
+
+    <!-- SECTION3 -->
+    <section class="leader" style="margin-top: 20px;">
+        <div class="leaderboard">
+
+            <div class="row">
+                <div class="col lead">Leaderboard</div>
+                <div class="col">
+                    <p>All time Edits</p>
+                    <p>Edits This week</p>
+                </div>
+            </div>
+
+            <!-- PUPIL -->
+            <div class="row">
+                <div class="col">
+                    <img src="https://ca-times.brightspotcdn.com/dims4/default/865c047/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F44%2F18%2F57d5ba6a4f99a25fe7ea1974c363%2Fdemon-slayer-flame.jpg"
+                        alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>RuiZafon</h1>
+                    <div class="row" style="margin-top: -12px;">
+                        <div class="foiz"></div><span>257,397</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1"></div><span>19,537</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>heli5m</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 350px;"></div><span>533,092</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1"></div><span>6,048</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://www.wfmt.com/wp-content/uploads/2017/09/Through-the-Night.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>Sheigutn</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 200px;"></div><span>257,397</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 140px;"></div><span>19,537</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?cs=srgb&dl=pexels-pixabay-355465.jpg&fm=jpg"alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>RedGreenBY</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 50px;"></div><span>6,893</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 100px;"></div><span>4,552</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://cdn.mos.cms.futurecdn.net/qXsVayNBGNZejBMQeYNiHa.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>smile578</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 50px;"></div><span>29,576</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 80px;"></div><span>3,537</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="leaderboard2" style="margin-top: 51px ;" >
+             <!-- PUPIL -->
+             <div class="row">
+                <div class="col">
+                    <img src="https://i.pinimg.com/originals/0e/50/39/0e503918829c61bd24803ce064546cee.jpg"
+                        alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>rqphqel</h1>
+                    <div class="row" style="margin-top: -12px;">
+                        <div class="foiz" style="width: 150px;"></div><span>122,397</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1"></div><span>23,537</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://mintspace.io/wp-content/uploads/2021/10/623aa8f9933ee9a286871bf6e0782538.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>jinbvcx</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 130px;"></div><span>126,092</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 180px;"></div><span>6,338</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://i.pinimg.com/236x/1d/58/ae/1d58ae74cc037834963ebe019597917e.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>talestalker</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 390px;"></div><span>877,397</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 140px;"></div><span>4,537</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://www.themanual.com/wp-content/uploads/sites/9/2022/02/onepunch.jpg?fit=800%2C533&p=1"
+                        alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>qualitylover</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 250px;"></div><span>318,893</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 170px;"></div><span>6,552</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="https://cdn.mos.cms.futurecdn.net/HYDEJgPwSJpv8tYADCRezZ.jpg" alt="">
+                </div>
+                <div class="col" style="margin-top: -10px;">
+                    <h1>pinheirocl</h1>
+                    <div class="row" style="margin-top: -15px;">
+                        <div class="foiz" style="width: 30px;"></div><span>17,576</span>
+                    </div>
+                    <div class="row">
+                        <div class="foiz1" style="width: 75px;"></div><span>4,537</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="col" style="margin-left: 190px;">
+            <img src="../Assets/movie.jpeg" alt="">
+            <button>Hi Abduvohid!</button>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>The BASICS</p>
+            <ul>
+                <li> <a href="">About TMBD</a> </li>
+                <li> <a href="">Contact Us</a> </li>
+                <li> <a href="">Support Forums</a> </li>
+                <li> <a href="">API</a> </li>
+                <li> <a href="">System Status</a> </li>
+                <li> <a href="">About TMBD</a> </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Get Involved</p>
+            <ul>
+                <li> <a href="">Contribution Bible</a> </li>
+                <li>
+                    <a href="">Add New Movie</a>
+                </li>
+                <li>
+                    <a href="">Add New Tv Shows</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Community</p>
+            <ul>
+                <li> <a href="">Guidelines</a> </li>
+                <li>
+                    <a href="">Discussions</a>
+                </li>
+                <li>
+                    <a href="">Leaderboard</a>
+                </li>
+                <li>
+                    <a href="">Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Legal</p>
+            <ul>
+                <li> <a href="">Terms of Use</a> </li>
+                <li>
+                    <a href="">API Terms of Use</a>
+                </li>
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

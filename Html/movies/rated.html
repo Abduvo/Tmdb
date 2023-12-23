@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/Popular.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Now playing</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="nav_link">
+            <div class="nav_logo">
+                <a href="../Index.html"> <img class="nav_img" src="../../Assets/TMDB.png" alt="The Movie Database (TMDB)"
+                        width="154" height="20"></a>
+            </div>
+
+            <ul class="nav_wrapper">
+                <li class="movie">Movies
+                    <div class="drop popu">
+                        <a href="./Popular.html">Popular</a><br>
+                        <a href="./playing.html">Now playing</a>
+                        <a href="./upcoming.html">Upcoming</a>
+                        <a onclick="rateded()" href="./rated.html">Top Rated</a>
+                    </div>
+                </li>
+
+                <li class="show"> TV Shows
+                    <div class="drop tv_show">
+                        <a href="../show/tv.html">Popular</a><br>
+                        <a href="../show/airing.html">Airing Today</a><br>
+                        <a href="">On Tv</a><br>
+                        <a href="">Top Rated</a>
+                    </div>
+                </li>
+
+                <li>People
+                    <div class="drop popular_people">
+                        <a href="../people.html">Popular People</a>
+                    </div>
+                </li>
+
+                <li>More
+                    <!-- <div class="drop">
+                        <a href="">Discussions</a>
+                        <a href="">Leaderboard</a>
+                        <a href="">Support</a>
+                        <a href="">API</a>
+                    </div> -->
+                </li>
+            </ul>
+
+            <div class="navbar">
+                <div class="nav_icon">
+                    <i style="font-weight: 800;" class="fa-solid fa-plus"></i>
+                </div>
+                <div class="nav_langua">
+                    <span></span><span></span><span></span><span></span><span>UZ</span>
+                </div>
+                <div class="profil">A</div>
+                <div class="nav_icon">
+                    <i style="color: #01b4e4;" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+    <h1>Top Rated movies</h1>
+
+    <main>
+        <div class="col collapse">
+            <!-- ContentBx1 -->
+            <div class="contentBx sort">
+                <div class="label">Sort
+                    <button onclick="right()" class="right_angel"><i class="fa-solid fa-angle-right"></i></button>
+                    <button onclick="down()" class="down_angel"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+                <div class="content result">
+                    <hr>
+                    <h5>Sort Results By</h5>
+                    <select>
+                        <option value="">Popularity Descending</option>
+                        <option value="">Popularity Ascending</option>
+                        <option value="">Rating Descending</option>
+                        <option value="">Rating Ascending</option>
+                        <option value="">Release Date Descending</option>
+                        <option value="">Release Date Ascending</option>
+                        <option value="">Title (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- ContentBx2 -->
+            <div class="contentBx filt_cont" style="margin-top: 20px;">
+                <div class="label">Filters
+                    <button onclick="filter_right()" class="filter_angel" style="padding-left: 160px;"><i
+                            class="fa-solid fa-angle-right"></i></button>
+                    <button style="display: none; padding-left: 160px;" onclick="filter_down()"
+                        class="filter_down_angel"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+                <div class="content filter">
+                    <hr>
+
+                    <div class="show">
+                        <h5>Show me</h5>
+                        <div class="every">
+                            <input type="radio" name="ss" id=""><label for="">Everything</label><br>
+                            <input type="radio" name="ss" id=""><label for="">Movies I Haven't Seen</label><br>
+                            <input type="radio" name="ss" id=""><label for="">Movies I have Seen</label><br>
+                        </div>
+                    </div>
+
+                    <div class="abilit">
+                        <hr>
+                        <h5>Availabilities</h5>
+                        <div class="label">
+                            <input style="margin-top: 10px; font-size: 14px;" type="checkbox" onclick="handler()"
+                                name="" id=""> <label for="">Search all availabilities?</label>
+                            <div class="stream">
+                                <input type="checkbox" name="" id=""> <label for="">Stream</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Free</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Ads</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Rent</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Buy</label><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="abilit">
+                        <hr>
+                        <h5>Release Dates</h5>
+                        <div class="label">
+                            <input type="checkbox" onclick="release()" style="margin-top: 10px; font-size: 14px;"
+                                name="" id="">
+                            <label for="">Search all release?</label><br>
+                            <div class="premiers">
+                                <input type="checkbox" name="" id=""> <label for="">Search all countries</label><br>
+                                <input style="margin-top: 20px;" type="checkbox" name="" id=""> <label
+                                    for="">Premiere</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Theatrical</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Digital</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">Physical</label><br>
+                                <input type="checkbox" name="" id=""> <label for="">TV</label><br>
+                            </div>
+                            <label class="date" for="">From</label><input class="from" style="margin-left: 30px;"
+                                type="date" name="" id=""><br>
+                            <label class="date" for="">To</label><input class="from" style="margin-left: 50px;"
+                                type="date" name="" id="">
+                        </div>
+                    </div>
+
+                    <div class="genres">
+                        <button>Action</button> <button>Adventure</button>
+                        <button>Animation</button> <button>Comedy</button>
+                        <button>Crime</button> <button>Documentry</button>
+                        <button>Drama</button> <button>Family</button>
+                        <button>Fantasy</button> <button>History</button>
+                        <button>Horror</button> <button>Music</button>
+                        <button>Mystery</button> <button>Romance</button>
+                        <button>Sciene Fiction</button> <button>TV Movie</button>
+                        <button>Thriller</button> <button>War</button>
+                        <button>Western</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- ContentBx3 -->
+            <div class="contentBx match" style="margin-top: 20px;">
+                <div class="label"> Where To Watch
+                    <button onclick="watch_right()" class="right_angel watch_angel" style="padding-left: 80px; display: block;"><i
+                            class="fa-solid fa-angle-right"></i></button>
+                    <button onclick="watch_angel()" class="down_angel watch_down" style="padding-left: 85px; display: none;"><i
+                            class="fa-solid fa-angle-down"></i></button>
+                </div>
+                <div class="content results">
+                    <hr>
+                    <div>
+                        <h5>My Services <i class="fa-solid fa-pen-to-square"></i></h5>
+                        <div class="row">
+                            <div class="col"><input type="checkbox" name="" id=""></div>
+                            <div class="col">
+                                <p class="restrict">Restrict searches to my</p>
+                                <p class="restrict">subscribed services?</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5 style="font-weight: 100; color: gray; margin-bottom: -0.3px;">Country</h5>
+                        <select>
+                            <option value="">Albaniya</option>
+                            <option value="">Andorra</option>
+                            <option value="">Argentina</option>
+                            <option value="">Avstriya</option>
+                            <option value="">Bahrayn</option>
+                            <option value="">Bolgariya</option>
+                            <option value="">Pere</option>
+                            <option value="">Pokiston</option>
+                            <option value="">Yaponiya</option>
+                            <option value="">Zambiya</option>
+                            <option value="">Kolumbiya</option>
+                            <option value="">Malta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button class="search_btn">Search</button>
+        </div>
+
+        <div class="rated"></div>
+
+    </main>
+
+    <div class="load">
+        <button>Load More</button>
+    </div>
+
+    <footer>
+        <div class="col" style="margin-left: 190px;">
+            <img src="../../Assets/movie.jpeg" alt="">
+            <button>Hi Abduvohid!</button>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>The BASICS</p>
+            <ul>
+                <li> <a href="">About TMBD</a> </li>
+                <li> <a href="">Contact Us</a> </li>
+                <li> <a href="">Support Forums</a> </li>
+                <li> <a href="">API</a> </li>
+                <li> <a href="">System Status</a> </li>
+                <li> <a href="">About TMBD</a> </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Get Involved</p>
+            <ul>
+                <li> <a href="">Contribution Bible</a> </li>
+                <li>
+                    <a href="">Add New Movie</a>
+                </li>
+                <li>
+                    <a href="">Add New Tv Shows</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Community</p>
+            <ul>
+                <li> <a href="">Guidelines</a> </li>
+                <li>
+                    <a href="">Discussions</a>
+                </li>
+                <li>
+                    <a href="">Leaderboard</a>
+                </li>
+                <li>
+                    <a href="">Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col" style="margin-top: 60px;">
+            <p>Legal</p>
+            <ul>
+                <li> <a href="">Terms of Use</a> </li>
+                <li>
+                    <a href="">API Terms of Use</a>
+                </li>
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../../js/playing.js"></script>
+</body>
+
+</html> 

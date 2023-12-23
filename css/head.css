@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    color: white;
+    height: 50%;
+}
+.cards , .sect , .cards-onTV {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+header > .nav_link {
+    display: flex;
+    background-color: #032541;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.nav_logo {
+    padding: 15px 0px 0px;
+    cursor: pointer;
+}
+
+.nav_wrapper {
+    display: flex;
+}
+
+.nav_wrapper > li {
+    list-style: none;
+    width: 80px;
+    font-size: 12px;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 3px 0px;
+}
+
+.navbar {
+    padding-left: 30%;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.drop {
+    background-color: white;
+    font-size: 15px;
+    padding: 5px 40px 5px 20px;   
+    border-radius: 5px; 
+    width: 100px;
+}
+
+.popu {
+    top: 35px;
+    position: fixed;
+    z-index: 1;  
+    display: none; 
+}
+
+.tv_show {
+    top: 35px;
+    position: fixed;
+    z-index: 1;  
+    display: none; 
+}
+
+.movie:hover .popu {
+    display: block;
+}
+
+.show:hover .tv_show {
+    display: block;
+}
+
+.popular_people {
+    display: none;
+    top: 35px;
+    position: fixed;
+    z-index: 1;  
+    display: none; 
+}
+
+.discusion {
+    display: none;
+    top: 35px;
+    position: fixed;
+    z-index: 1;  
+    display: none;
+}
+
+.more_drop:hover .discusion {
+    display: block;
+}
+
+.people:hover .popular_people {
+    display: block;
+}
+
+.navbar > .profil {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+
+.header_div {
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+}
+
+
+.head_wrap > h1 {
+    font-weight: 700;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+.head_wrap > h2 {
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+
+.head_flex > input {
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    font-size: 17px;
+    padding: 7px 20px;
+    outline: none;
+}
+
+.head_flex > button {
+    border-radius: 20px;
+    color: white;
+    background-color: #08bcd6;
+    border: none;
+    font-size: 15px;
+    padding: 6px 20px 4px ;
+    margin-left: -80px;
+    margin-bottom: 50px;
+}
+
+.head_wrapper {
+    background: url(https://image.tmdb.org/t/p/w1920_and_h600_multi_faces/rGbRnRvkmrSub07ty89Vnlsh6UX.jpg);
+    background-repeat: no-repeat;
+    padding: 0px 30px 30px;
+    background-size: cover;
+    margin-top: -50px;
+}
+
+.head_wrap {
+    background: url(https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?cs=srgb&dl=pexels-pixabay-355465.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 30px 10px;
+}
+
+.head_wrapper > h3 {
+    font-weight: 700;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+.head_wrapper > h4 {
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-top: -40px;
+}
+
+.head_wrapper > .chiziq {
+    background-color: white;
+    height: 1.5px;
+    width: 280px;
+    margin-top: 50px;
+}
+
+.head_wrapper > .check {
+    background-color: transparent; 
+    color: white; 
+    border: 3px solid white; 
+    border-radius: 20px; 
+    padding: 5px 20px; 
+    cursor: pointer;
+}
+
+.header_div > img  {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    margin-top: 30px;
+    background-color: #042544;
+    color: white;
+    padding-bottom: 50px;
+    font-family: sans-serif;
+    gap: 20px;
+}
+
+footer > .col > ul > li {
+    list-style: none;
+}
+
+footer > .col > ul > li > a {
+    color: white;
+    font-size: 16px;
+}
+
+footer > .col > p {
+    padding-left: 40px;
+    font-weight: 900;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+
+footer > .col > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer > .col > button {
+    color: #01b4e8;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: -160px;
+}
+
+.circular-chart {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: -30px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.circular-chart text {
+    font-size: 12px;
+    display: flex;
+}
+  
+.circle {
+    background-color: white;
+    stroke: #4CC790;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: red;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }

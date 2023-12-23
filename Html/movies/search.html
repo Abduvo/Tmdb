@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/Popular.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+    <title>The Movie</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VdvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <div class="nav_link">
+            <div class="nav_logo">
+                <a href="./Index.html"> <img class="nav_img" src="../Assets/TMDB.png" alt="The Movie Database (TMDB)" width="154"
+                        height="20"></a>
+            </div>
+
+            <ul class="nav_wrapper">
+                <li class="movie">Movies
+                    <div class="drop popu">
+                        <a href="./Popular.html">Popular</a><br>
+                        <a href="./playing.html">Now playing</a>
+                        <a href="./upcoming.html">Upcoming</a>
+                        <a href="">Top Rated</a>
+                    </div>
+                </li>
+
+                <li> TV Shows
+                    <!-- <div class="drop">
+                        <a href="">Popular</a>
+                        <a href="">Airing Today</a>
+                        <a href="">On Tv</a>
+                        <a href="">Top Rated</a>
+                    </div> -->
+                </li>
+
+                <li>People
+                    <!-- <div class="drop">
+                        <a href="">Popular People</a>
+                    </div> -->
+                </li>
+
+                <li>More
+                    <!-- <div class="drop">
+                        <a href="">Discussions</a>
+                        <a href="">Leaderboard</a>
+                        <a href="">Support</a>
+                        <a href="">API</a>
+                    </div> -->
+                </li>
+            </ul>
+
+            <div class="navbar">
+                <div class="nav_icon">
+                    <i style="font-weight: 800;" class="fa-solid fa-plus"></i>
+                </div>
+                <div class="nav_langua">
+                    <span></span><span></span><span></span><span></span><span>UZ</span>
+                </div>
+                <div class="profil">A</div>
+                <div class="nav_icon">
+                    <i style="color: #01b4e4;" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="box">
+        <input type="text" id="query"> <button id="searchBtn">Search</button><br>
+        <img src="" alt="" id="poster">
+        <hr>
+        Movie name
+        <p id="movie_name"></p>
+        <br>
+        Movie desc
+        <p id="movie_desc"></p>
+
+    </div>
+
+
+    <script>
+        $('#searchBtn').click(function() {
+            let query=$('#query').val()
+            $.getJSON('https://api.themoviedb.org/3/search/movie?api_key=a9d0c458a5571d93fb3c1bc190334abf', function (data) {
+            console.log(data.results[0]);
+            $('#movie_name').html(data.results[0].title)
+            $('#movie_desc').html(data.results[0].overview)
+            $('#poster').attr("src","https://image.tmdb.org/t/p/w200"+data.results[0].poster_path)
+        })
+        })
+        
+    </script>
+</body>
+
+</html>

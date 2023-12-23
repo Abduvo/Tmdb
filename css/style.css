@@ -1,0 +1,255 @@
+#main_film {
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    padding-top: 50px;
+}
+
+#trend_film {
+    margin-top: -5px;
+}
+
+#main_week {
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    padding-top: 50px;
+}
+
+#on_tv {
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    padding-top: 50px;
+}
+
+#Threaters {
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    padding-top: 50px;
+}
+
+.card {
+    padding-left: 20px;
+}
+
+.card > .card_img > a > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card > .card_img >  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card > .title > h2 {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card > .title > h6 {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: -5px;
+    color: rgba(0, 0, 0, 0.463);
+}
+
+.card > .title {
+    position: relative;
+}
+
+.card > .title > .card_average {
+    border: 3px solid #21d07a;
+    background-color: black;
+    color: white;
+    padding: 8px 5px 0.2px;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+    font-family: sans-serif;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+}
+
+.main_grid {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+}
+
+.sect_grid {
+    display: flex;
+    margin-left: -160px;
+}
+
+.sect_grid > h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+.main_grid > h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+.trending_film {
+    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 26px;
+}
+
+.trending_film > button {
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px 19.2px;
+    font-weight: 700;
+}
+
+.trending_film > .trending {
+    color: #65e7ba;
+    background-color: black;
+    cursor: pointer;
+}
+
+.trending_film > .trend {
+    cursor: pointer;
+    color: black;
+}
+
+
+.sect {
+    background: url(https://goldfilmm.net/uploads/posts/2023-01/1674133678_formatov1674095216_image_20.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    z-index: 1;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.sect > #on-tv {
+    margin-left: 20px;
+}
+
+.sect > #on-tv > .on-card > .on-video > video {
+    width: 300px; 
+    height: 200px; 
+}
+
+.on-card {
+    width: 30%;
+}
+
+.sect > #on-tv > .on-card > .on-title > h2 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0.2px;
+    font-weight: 600;
+}
+
+.sect > #on-tv > .on-card > .on-title > h6 {
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+
+
+#OntV-film{
+    display: grid;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    padding-top: 50px;
+}
+
+.leader {
+    display: flex;
+    font-family: sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 100px;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+.row > .col > p  {
+    font-size: 14px;
+    font-weight: 100 ;
+    margin-top: -10px;
+}
+
+.row > .col > p:first-child {
+    margin-top: 1px;
+}
+
+.row > .lead {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.row > .col > img {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.row > .col > h1 {
+    font-size: 15px;
+    margin-top: 30px;
+} 
+
+.row > .foiz {
+    width: 60px;
+    margin-top: 3px;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #91f2c4;
+}
+
+.row > .foiz1 {
+    width: 400px;
+    margin-top: 3px;
+    height: 6px;
+    border-radius: 20px;
+    background-color:#e15966;
+}
+
+.row > span {
+    font-size: 13px;
+}
+

@@ -1,0 +1,62 @@
+main {
+    margin-top: 30px;
+    font-family: sans-serif;
+    /* background-color: rgba(128, 128, 128, 0.473); */
+}
+
+.kvant {
+    color: white;
+    padding: 20px 10% 20px 4%;
+}
+
+.kvant > .row {
+    display: flex; 
+}
+
+.kvant > .row > .col > img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.kvant > .row > .col {
+    padding-left: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.pg {
+    font-size: 15px;
+    margin-top: -15px;
+}
+
+h5 {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.text {
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+h6 {
+    font-size: 17px;
+    margin-bottom: -15px;
+}
+
+.detail-chart {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.circular-chart text {
+    font-size: 12px;
+    display: flex;
+}

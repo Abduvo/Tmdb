@@ -1,0 +1,360 @@
+main {
+    display: flex;
+    font-family: sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+i {
+    font-weight: 900;
+}
+h1 {
+    padding-left: 5%;
+    font-family: sans-serif;
+}
+.collapse {
+    width: 320px;
+}
+
+.sort {
+    width: 95%;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 4px 8px 0 #e3e3e3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.filt_cont {
+    width: 95%;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 4px 8px 0 #e3e3e3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.match {
+    width: 95%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    box-shadow: 0 4px 8px 0 #e3e3e3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr {
+    margin-left: -10px;
+    width: 100%;
+}
+
+.contentBx > .label {
+    font-family: 20px;
+    font-weight: 700;
+    padding: 10px 10px 5px;
+    cursor: pointer;
+    width:100% ;
+}
+
+.contentBx > .label > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.contentBx > .label {
+    display: flex;
+}
+
+.contentBx > .label > .right_angel {
+    display: none;
+}
+
+
+.content {
+    padding: 5px 10px;
+    width: 95%;
+}
+
+.content > h5 {
+    margin-top: -1px;
+    font-weight: 200;
+    color: gray;
+}
+
+.content > select {
+    background-color: #e4e7eb;
+    font-size: 14px;
+    padding: 5px 8px ;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+
+
+.content > select > option {
+    font-size: 14px;
+    background-color: white;
+    padding-bottom: 20px;
+    width: 300px;
+}
+.content > .genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.content > .genres > button {
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0.5px solid gray;
+    padding: 4px 10px;
+}
+
+.content > .genres > button:hover {
+    background-color: #01b4e4;
+    color: white;
+    border-color:#01b4e4 ;
+}
+
+
+.content > .show > .every {
+    margin-top: -15px;
+}
+
+.content > .show > .every > label {
+    font-weight: 200;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.content > .show > h5 {
+    color: gray;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -1px;
+}
+
+.content > .abilit  > h5 {
+    color: gray;
+    font-size: 15px;
+    font-weight: 300;
+    margin: -0px 2px -0px;
+}
+
+.content > .abilit > .label > .stream > label {
+    font-size: 14px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.abilit > .label > .stream  {
+    display: none;
+}
+
+.content > .abilit > .label > .premiers {
+    display: none;
+}
+
+.content > .abilit > .label > .premiers  > label {
+    font-size: 14px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.content > .abilit > .label > .date {
+    color: gray;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.content > .abilit > .label > .from {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.contentBx > .filter {
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 #e3e3e3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 150px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card > .card_img > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card > .title > h2 {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.card > .title > h6 {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    margin-top: -5px;
+    color: rgba(0, 0, 0, 0.463);
+    padding-left: 10px;
+}
+
+.card > .title {
+    position: relative;
+}
+
+.card > .title > .card_average {
+    border: 3px solid #21d07a;
+    background-color: black;
+    color: white;
+    padding: 8px 5px 0.2px;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+    font-family: sans-serif;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+}
+
+.popular {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rated {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.upcom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.row > .col > .restrict {
+    font-size: 13px;
+    margin-top: -10px;
+    padding-left: 10px;
+}
+.results {
+    display: none;
+}
+
+
+.results > div > select {
+    background-color: #e4e7eb;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px 8px ;
+    margin-bottom: 10px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.search_btn {
+    background-color: #ececec;
+    color: #767676;
+    width: 230px;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.load {
+    background-color: #01b4e4;
+    margin:  20px 12% 20px 30.7% ;
+    border-radius: 5px;
+}
+
+.load > button {
+    margin-left: 380px;
+    background-color: transparent;
+    border: none;
+    padding: 10px ;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.load > button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.playing_now {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Popular_TV_Shows {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.airing_Today {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.people_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.people_main > .card_people {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 #e3e3e3, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_people > .people_title > img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    background-position: center center;
+}
+.card_people > .people_body > h3{
+    margin-top: -2px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.card_people > .people_body > p {
+    margin-top: -20px;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: 100;
+}
